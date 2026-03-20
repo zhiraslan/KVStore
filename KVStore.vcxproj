@@ -128,6 +128,7 @@
     <ClInclude Include="Storage.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="main.cpp" />
     <ClCompile Include="Service.cpp" />
     <ClCompile Include="Storage.cpp" />
   </ItemGroup>

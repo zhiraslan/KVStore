@@ -15,8 +15,8 @@ template<typename T>
 class Result {
 public:
 	// конструктор для ОК
-	Result(const T& value)
-		: value_{ value }, status_{ Status::OK }, isOk_{true} {}
+	Result(const T& val)
+		: val_{ val }, status_{ Status::OK }, isOk_{true} {}
 
 	// конструктор для ошибки
 	Result(Status status)
@@ -26,13 +26,13 @@ public:
 		return isOk_;
 	}
 
-	const T& value() const{
+	const T& val() const{
 		assert(ok());
 		
 		//if (!ok()) {
 		//	std::terminate();
 		//}
-		return value_;
+		return val_;
 	}
 
 	Status status() const {
@@ -40,7 +40,7 @@ public:
 	}
 
 private:
-	T value_{};
+	T val_{};
 	Status status_{ Status::OK };
 	bool isOk_{ false };
 };
